@@ -25,10 +25,10 @@ object Lists {
   def sum(xs: List[Int]): Int =
   {
     if(xs.isEmpty){
-      return 0
+       0
     }
     else {
-      return xs.head + sum(xs.tail)
+       xs.head + sum(xs.tail)
     }
   }
 
@@ -46,16 +46,15 @@ object Lists {
    * @throws java.util.NoSuchElementException if `xs` is an empty list
    */
     def returnMax(a: Int, b: Int): Int ={
-     var max =  if (a>b) a else  b
-      return max
+      if (a>b) a else  b
     }
 
   def max(xs: List[Int]): Int = {
     if (xs.length==1){
-      return xs(0)
+       xs.head
     }
     else{
-      return(returnMax(xs.head,max(xs.tail)))
+      returnMax(xs.head,max(xs.tail))
     }
   }
 }
